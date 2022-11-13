@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hello user {{username}}</title>
+  <!-- <link rel='stylesheet' type="text/css" href="hellouser/static/style.css"> This does not work... Use url_for-->
+  <link rel='stylesheet' type="text/css" href="{{url_for('static',filename='style2.css')}}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='heart_one_in_one.ico') }}">
+</head>
+<body>
+  Hello {{name}}
+  <br/>
+  Your post_id is {{post_id}}
+  <!-- <script src="static/script.js"></script> This does not work -->
+   <script src={{url_for('static', filename='script.js')}}></script>
+
+</body>
+</html>
+
